@@ -6,7 +6,7 @@ import {
     PlusIcon,
     StarIcon,
 } from "@heroicons/react/solid";
-import { getSession, signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 
 
@@ -28,6 +28,7 @@ function Header() {
                 height={80}
                 className="cursor-pointer"
                 onClick={() => router.push("/")}
+                alt="logo"
             />
 
             {session && (
@@ -49,11 +50,11 @@ function Header() {
                         <span className="span">Originals</span>
                     </a>
                     <a className="header-link group">
-                        <img src="/images/movie-icon.svg" alt="" className="h-5" />
+                        <img src="/images/movie-icon.svg" alt="movie" className="h-5" />
                         <span className="span">Movies</span>
                     </a>
                     <a className="header-link group">
-                        <img src="/images/series-icon.svg" alt="" className="h-5" />
+                        <img src="/images/series-icon.svg" alt="series" className="h-5" />
                         <span className="span">Series</span>
                     </a>
                 </div>

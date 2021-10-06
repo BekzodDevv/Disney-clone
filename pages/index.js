@@ -25,7 +25,6 @@ export default function Home({
       </Head>
 
 
-
       <Header />
 
       {!session ? (
@@ -34,15 +33,14 @@ export default function Home({
         <main className="relative min-h-screen after:bg-home
         after:bg-center after:bg-cover after:bg-no-repeat
         after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
+          
           <Slider />
           <Brands />
+
           <MoviesCollection results={popularMovies} title="Popular Movies" />
           <ShowsCollection results={popularShows} title="Popular Shows" />
 
-          <MoviesCollection
-            results={top_ratedMovies}
-            title="Top Rated Movies"
-          />
+          <MoviesCollection results={top_ratedMovies} title="Top Rated Movies" />
           <ShowsCollection results={top_ratedShows} title="Top Rated Shows" />
 
         </main>
